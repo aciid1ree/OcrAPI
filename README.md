@@ -31,7 +31,18 @@
 2. Установите зависимости:
    ```bash
    pip install -r requirements.txt
-3.Создайте файл .env и добавьте ваш API-ключ GigaChat: 
+3. Создайте файл .env и добавьте ваш API-ключ GigaChat: 
    ```bash
    GIGACHAT_API_KEY=your_token_here
+4. Запустите сервер:
+   ```bash
+   uvicorn main:app --reload
+5. Перейдите в браузер:
+   ```bash
+   http://localhost:8000/docs
 
+
+##  Эндпоинты
+
+- **POST /ocr** - Загружает изображение чека и возвращает распознанные блюда, цены, количество и итоговую сумму.
+- **POST /meal_combinations** - На основе ранее распознанного чека возвращает возможные комбинации обедов.
