@@ -14,6 +14,7 @@ app = FastAPI()
 load_dotenv()
 
 api_key = os.getenv("GIGACHAT_API_KEY")
+print(api_key) 
 
 def GetPrompt(recognizedText):
     prompt = (
