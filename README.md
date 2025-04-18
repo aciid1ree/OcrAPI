@@ -28,3 +28,10 @@
    ```bash
    git clone https://github.com/your-username/your-repo.git
    cd your-repo
+2. Установите зависимости:
+   ```bash
+   pip install -r requirements.txt
+3.Создайте файл .env и добавьте ваш API-ключ GigaChat: 
+   ```bash
+   GIGACHAT_API_KEY=your_token_here
+
