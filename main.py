@@ -73,6 +73,8 @@ async def ocr_image(file: UploadFile = File(...)):
     image_bytes = await file.read()
     image = Image.open(io.BytesIO(image_bytes))
     processed_image = image
+    print(os.getenv("API_KEY"))
+
     recognized_text = pytesseract.image_to_string(processed_image, lang='rus')
 
     with GigaChat(credentials=api_key, verify_ssl_certs=False) as giga:
